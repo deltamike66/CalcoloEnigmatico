@@ -62,53 +62,7 @@ public class Schema {
 	}
 
 	public void setOperator(int i, int op) {
-		char c;
-		switch (op) {
-		case 1:
-			c = '+';
-			break;
-		case 2:
-			c = 'x';
-			break;
-		case 3:
-			c = '-';
-			break;
-		case 4:
-			c = ':';
-			break;
-		default:
-			c = ' ';
-			break;
-		}
-
-		this.operator[i] = c;
-	}
-
-	public String toString() {
-		String s = "\n\n";
-
-		s += this.number[0][0] + "" + this.number[0][1] + "" + this.number[0][2];
-		s += this.operator[0];
-		s += this.number[0][3] + "" + this.number[0][4] + "" + this.number[0][5];
-		s += '=';
-		s += this.number[0][6] + "" + this.number[0][7] + "" + this.number[0][8];
-		s += '\n';
-		s += "  " + this.operator[1] + "   " + this.operator[2] + "   " + this.operator[3];
-		s += '\n';
-		s += this.number[1][0] + "" + this.number[1][1] + "" + this.number[1][2];
-		s += this.operator[4];
-		s += this.number[1][3] + "" + this.number[1][4] + "" + this.number[1][5];
-		s += '=';
-		s += this.number[1][6] + "" + this.number[1][7] + "" + this.number[1][8];
-		s += '\n';
-		s += "-----------";
-		s += '\n';
-		s += this.number[2][0] + "" + this.number[2][1] + "" + this.number[2][2];
-		s += this.operator[5];
-		s += this.number[2][3] + "" + this.number[2][4] + "" + this.number[2][5];
-		s += '=';
-		s += this.number[2][6] + "" + this.number[2][7] + "" + this.number[2][8];
-		return s;
+		this.operator[i] = op == 1 ? '+' : op == 2 ? 'x' : op == 3 ? '-' : op == 4 ? ':' :  ' ' ;
 	}
 
 	public int[][] getSolution() {
