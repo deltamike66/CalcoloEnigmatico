@@ -321,6 +321,7 @@ public class Calcolo {
 	}
 	
 	private void risolvi(Runnable runner) {	
+		long inizio = System.currentTimeMillis();
 		if (schema.risolvi()) {
 			int[][] s = new int[3][9];
 			s = schema.getSolution();
@@ -335,9 +336,11 @@ public class Calcolo {
 					}
 				}
 			}
-			lblStatus.setText("Risolto!");
+			long fine = System.currentTimeMillis();
+			lblStatus.setText("Risolto! Tempo impegato:" + (fine - inizio)/1000.0 + " secondi");
 		} else {
-			lblStatus.setText("Impossibile da risolvere");
+			long fine = System.currentTimeMillis();
+			lblStatus.setText("Impossibile da risolvere. Tempo impegato:" + (fine - inizio)/1000.0 + " secondi");
 		}
 	}
 	
