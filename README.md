@@ -9,3 +9,4 @@ Questo mi permette di ridurre i tempi di elaborazione perchè i simboli per ogni
 
 L'utilizzo è semplice, con lo schema vuoto, cliccare su una casella e scegliere il simbolo o l'operazione desiderata, e una volta completato lo schema, premere il tasto "risolvi".
 
+![schermata risolta](https://github.com/user-attachments/assets/3781bb0b-d5ae-4e5d-8070-f22e8e82a1e6)
